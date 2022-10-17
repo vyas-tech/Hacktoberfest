@@ -6,11 +6,39 @@ import TitleText from "../Components/TitleText";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
+const LoadingComponent = () => {
+  return (
+    <div
+      style={{
+        display: "flex",
+      }}
+    >
+      <img
+        className={styles.img}
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+        alt="react logo"
+      />
+      <span
+        style={{
+          marginLeft: 20,
+        }}
+      >
+        CK Editor is loading...
+      </span>
+    </div>
+  );
+};
+
 const Summary = () => {
-  const [loaded, setloaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  function handleOnReady() {
+    setLoaded(true);
+  }
+
   useEffect(() => {
-    setloaded(true);
+    handleOnReady();
   }, []);
+
   return (
     <div
       style={{ height: "500px" }}
@@ -22,17 +50,8 @@ const Summary = () => {
       />
       <div className={styles.textarea}>
         {(loaded && (
-          <CKEditor
-            className={styles.ckeditor}
-            editor={ClassicEditor}
-            data="<p>Welcome to my react Learning</p>"
-          />
-        )) || <img
-        className={styles.img}
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-        height="100em"
-        alt="react logo"
-      />}
+          <CKEditor className={styles.ckeditor} editor={ClassicEditor} />
+        )) || <LoadingComponent />}
       </div>
     </div>
   );

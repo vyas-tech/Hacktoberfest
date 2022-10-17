@@ -1,9 +1,11 @@
 import React from "react";
 import { FaUserSecret } from "react-icons/fa";
+import { FcNext } from "react-icons/fc";
 import styles from "../LeftSection/LeftSection.module.css";
 
 const icons = {
   plus: FaUserSecret,
+  next:FcNext,
 };
 
 export const Button = (props) => {

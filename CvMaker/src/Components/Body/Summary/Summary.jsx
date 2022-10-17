@@ -7,9 +7,9 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 const Summary = () => {
-  const [loaded, setloaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    setloaded(true);
+    setLoaded(true);
   }, []);
   return (
     <div

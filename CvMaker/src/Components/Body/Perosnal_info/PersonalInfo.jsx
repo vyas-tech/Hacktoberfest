@@ -3,6 +3,7 @@ import styles from "./PersonalInfo.module.css";
 import boiler from "../Boiler.module.css";
 import TitleText from "../Components/TitleText";
 import Input from "../Components/InputField";
+import { Button } from '../../button/buttons';
 
 const PersonalInfo = () => {
   return (
@@ -57,6 +58,9 @@ const PersonalInfo = () => {
         
         />
         
+      </div>
+      <div className={styles.button}>
+        <Button icon="next" text="Next Section" link="/summary"/>
       </div>
     </div>
   );

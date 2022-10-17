@@ -8,3 +8,9 @@
   display: flex;
 margin-right: 8vw;
 }
+
+.button{
+  display: flex;
+  margin-top: 5vh;
+  justify-content: end;
+}

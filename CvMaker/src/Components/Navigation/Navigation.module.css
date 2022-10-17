@@ -1,0 +1,43 @@
+.nav {
+  height: 8em;
+  width: 100%;
+  background: var(--color-primary);
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+.ul {
+  padding: 30px 20px;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+
+}
+
+.img {
+  margin-right: auto;
+  animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.li {
+  color: var(--color-white);
+  padding: 0 12px;
+  align-items: center;
+  margin: 12px;
+}
+
+.navIcons {
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
+  margin: 0 5px;
+}

@@ -1,0 +1,13 @@
+.title {
+    font-weight: 600px;
+}
+
+.input {
+  margin-top: 1vh;
+  padding: 10px 4px;
+}
+
+.inputcontainer {
+  margin: 2vh 0;
+  padding: 0 4px;
+}

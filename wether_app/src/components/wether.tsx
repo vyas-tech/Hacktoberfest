@@ -22,8 +22,7 @@ function location() {
 
 class Wether extends React.Component<WetherProps, WetherState> {
   async fetchData() {
-    // const key = "<YOUR OWN API KEY FROM WETHERAPI>";
-    const key = "b5d32261c0dc4f88a71111045221406";
+    const key = "<YOUR OWN API KEY FROM WETHERAPI>";
 
     const count = "Nepal"
     let data = await axios(

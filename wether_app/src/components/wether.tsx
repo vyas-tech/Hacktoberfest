@@ -14,7 +14,8 @@ interface WetherState {
   wetherLocation: string;
 }
 
-class Wether extends React.Component<WetherProps, WetherState> {
+class 
+Wether extends React.Component<WetherProps, WetherState> {
   componentDidMount() {
     const country: string = prompt("country name") as string;
 

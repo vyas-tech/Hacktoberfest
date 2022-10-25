@@ -1,9 +1,8 @@
 import axios from "axios";
 import React from "react";
-import { useState } from "react";
 import "./wether.css";
 
-interface WetherProps { }
+interface WetherProps {}
 
 interface WetherState {
   location: string;
@@ -15,18 +14,26 @@ interface WetherState {
   wetherLocation: string;
 }
 
-function location() {
-  let data = prompt("Enter Your Location");
-  return data;
-} 
-
 class Wether extends React.Component<WetherProps, WetherState> {
-  async fetchData() {
-    const key = "<YOUR OWN API KEY FROM WETHERAPI>";
+  componentDidMount() {
+    const country: string = prompt("country name") as string;
 
-    const count = "Nepal"
+    this.setState((state) => {
+      return { ...state, country };
+    });
+
+    this.fetchData(country);
+  }
+
+  shauldComponentUpdate() {
+    return false;
+  }
+
+  async fetchData(countryName: string) {
+    const key = "b5d32261c0dc4f88a71111045221406";
+
     let data = await axios(
-      `http://api.weatherapi.com/v1/current.json?key=${key}&q=${count}&aqi=yes`
+      `http://api.weatherapi.com/v1/current.json?key=${key}&q=${countryName}&aqi=yes`
     );
     const wetherData = JSON.parse(data.request.response);
     this.setState({
@@ -39,13 +46,16 @@ class Wether extends React.Component<WetherProps, WetherState> {
     } as WetherState);
   }
   render() {
-    this.fetchData()
     return (
       <div className="parentContainer">
         {/* <button onClick={() => }>⟳</button> */}
         {(!this.state?.country && "Loading......") || (
           <div className="main-container">
-            <img className="wetherIcon" src={this.state.image} alt='this is wether icon' />
+            <img
+              className="wetherIcon"
+              src={this.state.image}
+              alt="this is wether icon"
+            />
             <p className="currentTemp">
               {this.state.temerature}
               <sup>o</sup>C
@@ -54,7 +64,6 @@ class Wether extends React.Component<WetherProps, WetherState> {
             <p className="locationName">
               {this.state.location + " , " + this.state.country}
             </p>
-
           </div>
         )}
       </div>

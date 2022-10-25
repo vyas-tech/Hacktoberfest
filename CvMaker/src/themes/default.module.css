@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,400&display=swap");
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   font-family: var(--font-primary);
 }
 :root {
@@ -14,5 +14,5 @@ body {
   --color-white: #ffffff;
   --color-black: #000000;
   --text-color: var(--color-white);
-  --font-primary: 'Ubuntu', sans-serif;
+  --font-primary: "Ubuntu", sans-serif;
 }

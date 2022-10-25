@@ -1,12 +1,12 @@
-.textarea{
+.textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.form{
+.form {
   display: flex;
-margin-right: 8vw;
+  margin-right: 8vw;
 }
 
 .button{

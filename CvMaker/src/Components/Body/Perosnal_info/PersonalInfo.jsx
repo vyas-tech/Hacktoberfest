@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import styles from "./PersonalInfo.module.css";
 import boiler from "../Boiler.module.css";
 import TitleText from "../Components/TitleText";
@@ -21,17 +21,10 @@ const PersonalInfo = () => {
           title="Full Name"
         />
         <form className={styles.form}>
-          <Input
-            type="radio"
-            placeholder="Enter Your Gender here"
-            bordercolor="Blue"
-            name="Male"
-            title="Gender"
-          />
+          <Input type="radio" bordercolor="Blue" name="Male" title="Gender" />
           <Input
             type="radio"
             styple={{ padding: "10px 4px" }}
-            placeholder="Enter Your Gender here"
             bordercolor="Blue"
             name="Female"
           />
@@ -54,9 +47,7 @@ const PersonalInfo = () => {
           placeholder="Enter Your Temporary Address"
           bordercolor="Blue"
           title="Temporary Address"
-        
         />
-        
       </div>
     </div>
   );

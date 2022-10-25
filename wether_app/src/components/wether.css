@@ -1,10 +1,15 @@
 body {
-  background-color: #4E5860;
+  background: url(../background.jpg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .parentContainer {
+  margin-bottom: 100px;
   border-radius: 2%;
-  background-color: #2E3335;
+  background-color: #00a4e4ae;
   margin-top: 15%;
   height: 28rem;
   width: 20rem;
@@ -14,10 +19,11 @@ body {
 }
 
 .main-container {
+  /* margin: auto; */
   text-align: center;
   position: absolute;
   border-radius: 2%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.9);
   height: 21rem;
   width: 20rem;
 }

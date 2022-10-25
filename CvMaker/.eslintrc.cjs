@@ -11,15 +11,6 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    quotes: ["error", "double"],
-    "react/function-component-definition": [
-      "enable",
-      {
-        namedComponents:
-          "function-declaration" | "function-expression" | "arrow-function",
-      },
-    ],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    quotes: 0,
   },
 };

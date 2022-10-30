@@ -20,6 +20,16 @@ this.setState({
       
     }
   }
+ handleDelete=id=>{
+  console.log("Deleted",id);
+  const Olditems=[...this.state.item]
+  console.log("Olditems",Olditems);
+  const item = Olditems.filter((element,i)=>{
+    return i !==id
+  })
+  console.log("Newitems",item);
+  this.setState({item:item});
+ } 
   
   render(){
     return(

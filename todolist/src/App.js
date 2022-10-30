@@ -16,6 +16,7 @@ this.setState({
   handleAdd=e=>{
     if(this.state.text !==""){
       const item=[...this.state.item,this.state.text];
+      this.setState({ item: item, text: "" });
       
     }
   }
